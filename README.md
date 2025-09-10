@@ -8,7 +8,8 @@ This repository contains **three Python automation projects** that demonstrate h
 
 1. **MultiClipboard Manager** – store and retrieve multiple clipboard snippets.  
 2. **Email Sender** – send emails securely using Gmail SMTP.  
-3. **YouTube Downloader** – download YouTube videos in the highest available resolution (1080p/2K/4K) with yt-dlp and FFmpeg.  
+3. **YouTube Downloader** – download YouTube videos in the highest available resolution (1080p/2K/4K) with yt-dlp and FFmpeg.
+4. **Python Log Parser** -  This script combines all the steps. It reads app.log, applies the regex, and prints the structured data.
 
 ---
 
@@ -90,3 +91,41 @@ Install yt-dlp:
 pip install yt-dlp
 ```
 
+## 📂 Project 4: Python Log Parser (`log_parsing.py`)
+
+A simple yet powerful Python script for parsing structured log files using regular expressions. This tool reads log entries, extracts key information like timestamps, log levels, and messages, and converts them into a structured format (a list of dictionaries) for easy analysis.
+
+## Features ✨
+Pattern-Based Parsing: Uses Python's re module for flexible and powerful log matching.
+
+Structured Output: Converts unstructured log lines into a list of dictionaries (JSON).
+
+Error Resilient: Ignores and reports malformed or non-matching log lines instead of crashing.
+
+Memory Efficient: Reads the log file line-by-line, making it suitable for large files.
+
+Easily Customizable: Designed for easy modification of the file path and regex pattern to fit your specific needs.
+
+## Prerequisites
+Python 3.6+ (due to the use of f-strings)
+
+No external libraries are needed. The script uses the built-in ``` re ``` and ``` json ``` modules.
+
+## Usage 🚀
+Place the Files: Save the script as parse_log.py. Place your log file (e.g., app.log) in the same directory.
+
+Configure the Script: Open parse_log.py and modify the file_path variable inside the if __name__ == "__main__": block to point to your log file.
+
+```Python
+
+# In the main execution block of the script
+log_file_to_parse = 'app.log' # <-- CHANGE THIS TO YOUR LOG FILE'S NAME
+parsed_data = parse_log_file(log_file_to_parse)
+```
+Run from Terminal: Execute the script from your terminal.
+
+```bash
+
+python parse_log.py
+```
+View the Output: The script will print the parsed data to the console in a pretty-printed JSON format. It will also notify you of any lines it skipped.
