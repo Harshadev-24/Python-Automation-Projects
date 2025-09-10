@@ -112,20 +112,12 @@ Python 3.6+ (due to the use of f-strings)
 No external libraries are needed. The script uses the built-in ``` re ``` and ``` json ``` modules.
 
 ## Usage 🚀
-Place the Files: Save the script as parse_log.py. Place your log file (e.g., app.log) in the same directory.
+Place the Files: Save the script as log_parsing.py. Place your log file (e.g., app.log) in the same directory.
 
-Configure the Script: Open parse_log.py and modify the file_path variable inside the if __name__ == "__main__": block to point to your log file.
-
-```Python
-
-# In the main execution block of the script
-log_file_to_parse = 'app.log' # <-- CHANGE THIS TO YOUR LOG FILE'S NAME
-parsed_data = parse_log_file(log_file_to_parse)
-```
-Run from Terminal: Execute the script from your terminal.
+Configure the Script: Open log_parsing.py and modify the file_path variable inside the if __name__ == "__main__": block to point to your log file.
 
 ```bash
 
-python parse_log.py
+python log_parsing.py
 ```
 View the Output: The script will print the parsed data to the console in a pretty-printed JSON format. It will also notify you of any lines it skipped.
