@@ -1,0 +1,5 @@
+2025-09-10 11:30:15,255 INFO [main] - Application starting up...
+2025-09-10 11:30:16,301 DEBUG [database] - Establishing database connection.
+2025-09-10 11:30:17,450 WARNING [auth] - Failed login attempt for user: guest
+This is a malformed line and should be skipped.
+2025-09-10 11:30:18,102 ERROR [main] - Critical error occurred: service unavailable.
